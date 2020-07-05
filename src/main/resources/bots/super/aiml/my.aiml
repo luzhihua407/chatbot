@@ -31,13 +31,53 @@
 <template><srai>你好</srai></template>
 </category>
 <category><pattern>帮助</pattern>
-<template><srai>请输入单号：*</srai></template>
+<template><button>
+  <text>百度</text>
+  <url>http://www.baidu.com </url>
+</button></template>
 </category>
-<category><pattern>请输入单号：*</pattern>
-<template><random>
-      <li>我也不知道</li>
-      <li>他也不知道</li>
-      <li>那谁知道</li>
-    </random></template>
+<category><pattern>门店辖区分哪几种划分方式</pattern>
+<template>
+<li>分为两种方式，两种方式只能二选一：</li>
+<li>1. 行政区划。行政区划是根据国家行政区域来划分门店辖区，如果门店辖区和行政区划吻合，例如番禺区、天河区，可采用这种方式。划分非常简单，直接选择门店覆盖哪些区县，保存即可；</li>
+<li>2. 电子围栏。电子围栏是通过在地图上根据河流、道路等显著地标描点的方式划分边界，需要人工绘制一个围起来的范围。</li>
+</template>
+</category>
+<category>
+  <pattern>POSTBACK</pattern>
+  <template>
+    Here's an example of what a few postback buttons look like in the widget.
+    <button>
+      <text>Postback Button</text>
+      <postback>POSTBACK BUTTON</postback>
+    </button>
+  </template>
+</category>
+<category>
+  <pattern>REPLY EXAMPLE</pattern>
+  <template>
+    Here's an example of what a few reply buttons look like in the widget. Replies within the same template are always grouped together beneath your last message.
+    <reply>
+      <text>Ok!</text>
+      <postback>POSTBACK</postback>
+    </reply>
+  </template>
+</category>
+<category>
+  <pattern>POSTBACK</pattern><that>REPLIES *</that>
+  <template>
+    Quick replies work just like postbacks, and send a message directly to your bot without the user having to see it. That's how you hit this category!
+    <reply>
+      <text>Ok!</text>
+      <postback>Nice!</postback>
+    </reply>
+  </template>
+</category>
+<category>
+  <pattern>link</pattern>
+<template><hyperlink>
+    <text>Pandorabots.com</text>
+    <url>https://www.pandorabots.com </url>
+  </hyperlink></template>
 </category>
 </aiml>
