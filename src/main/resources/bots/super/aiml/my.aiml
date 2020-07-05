@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: my.aiml -->
+<!-- Author: Dr. Richard S. Wallace -->
+<!-- Last modified: 七月 04, 2020 -->
+<!--  -->
+<!-- This AIML file is part of the SUPER 0.0.4 chat bot knowledge base. -->
+<!--  -->
+<!-- The SUPER brain is Copyright &copy; 2020 by ALICE AI Foundation. -->
+<!--  -->
+<!-- The SUPER brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.alicebot.org -->
+<category><pattern>你叫什么名字</pattern>
+<template>我叫刘德华</template>
+</category>
+<category><pattern>你叫*</pattern>
+<template>我叫张学友</template>
+</category>
+<category><pattern>你是男是女</pattern>
+<template>你说呢？</template>
+</category>
+<category><pattern>你好</pattern>
+<template>我很好</template>
+</category>
+<category><pattern>好呀</pattern>
+<template><srai>你好</srai></template>
+</category>
+<category><pattern>帮助</pattern>
+<template><srai>请输入单号：*</srai></template>
+</category>
+<category><pattern>请输入单号：*</pattern>
+<template><random>
+      <li>我也不知道</li>
+      <li>他也不知道</li>
+      <li>那谁知道</li>
+    </random></template>
+</category>
+</aiml>
