@@ -30,7 +30,7 @@
             var question=$("#question").val();
             $.ajax({
                 type: "GET",
-                url: "http://192.168.0.80:8888/tall",
+                url: "${server}/tall",
                 data: "msg="+question,
                 beforeSend:function(xhr){
                     $("#content").append(question);
