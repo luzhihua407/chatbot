@@ -18,25 +18,6 @@
         <java.version>1.8</java.version>
         <httpclient.version>4.2.5</httpclient.version>
     </properties>
-    <repositories>
-        <repository>
-            <id>soluvas-public-thirdparty</id>
-            <url>http://nexus.bippo.co.id/nexus/content/repositories/soluvas-public-thirdparty/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <distributionManagement>
-        <snapshotRepository>
-            <id>soluvas-public-snapshots</id>
-            <url>http://nexus.bippo.co.id/nexus/content/repositories/soluvas-public-snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>soluvas-public-releases</id>
-            <url>http://nexus.bippo.co.id/nexus/content/repositories/soluvas-public-releases/</url>
-        </repository>
-    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -79,29 +60,11 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>${httpclient.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-            <version>2.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20090211</version>
-        </dependency>
-        <dependency>
-            <groupId>net.reduls.sanmoku</groupId>
-            <artifactId>sanmoku</artifactId>
-            <version>0.0.5</version>
-        </dependency>
-        <dependency>
-            <groupId>net.reduls.sanmoku</groupId>
-            <artifactId>sanmoku-feature-ex</artifactId>
-            <version>0.0.1</version>
+            <artifactId>com.google</artifactId>
+            <groupId>Ab</groupId>
+            <version>0.0.4.3</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/Ab.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

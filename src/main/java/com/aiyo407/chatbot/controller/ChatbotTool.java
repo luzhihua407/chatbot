@@ -19,7 +19,7 @@ public class ChatbotTool {
 		MagicBooleans.trace_mode = TRACE_MODE;
 		Bot bot = null;
 		MagicBooleans.trace_mode = TRACE_MODE;
-		bot = new Bot(MagicStrings.default_bot, resourcesPath);
+		bot = new Bot("super", resourcesPath);
 		Chat chatSession = new Chat(bot);
 		bot.brain.nodeStats();
 		return  chatSession;
