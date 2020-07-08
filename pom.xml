@@ -60,6 +60,10 @@
             <optional>true</optional>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+        <dependency>
             <artifactId>com.google</artifactId>
             <groupId>Ab</groupId>
             <version>0.0.4.3</version>
