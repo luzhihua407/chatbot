@@ -57,17 +57,17 @@
     botui.message
         .bot({
             delay: 1000,
-            content: '嗨！我是您的客服兔女郎'
+            content: '嗨！欢迎光临，我是客服小兔兔'
         }).then(function (index) {
         return botui.action.button({
                 delay: 200,
                 loading: true,
                 addMessage: false,
                 action: [{
-                    text:'不需要帮助',
-                    value:'不需要帮助'
+                    text:'直接输入',
+                    value:'直接输入'
                 },{
-                    text:'需要帮助',
+                    text:'帮助',
                     value:'帮助'
                 }
                 ]
