@@ -57,19 +57,28 @@
     botui.message
         .bot({
             delay: 1000,
-            content: '嗨！我是您的客服小秘'
+            content: '嗨！我是您的客服兔女郎'
         }).then(function (index) {
         return botui.action.button({
                 delay: 200,
                 loading: true,
-                addMessage: true,
+                addMessage: false,
                 action: [{
-                    text:'帮助',
+                    text:'不需要帮助',
+                    value:'不需要帮助'
+                },{
+                    text:'需要帮助',
                     value:'帮助'
                 }
                 ]
             }).then(function (res) {
-                sendXHR(res.value, renderResult)
+                console.log(res.value)
+                if(res.value=='帮助'){
+                    sendXHR(res.value, renderResult)
+                }else{
+                    init();
+                }
+
 
             });
     });
@@ -81,7 +90,10 @@
                         placeholder: '请输入信息'
                     }
                     }).then(function (res) {
+                        if(res.value!=''){
+
                         sendXHR(res.value, renderResult)
+                        }
                     });
     }
 

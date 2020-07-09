@@ -15,75 +15,32 @@
 <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
 <!--  -->
 <!-- For more information see http://www.alicebot.org -->
-<category><pattern>你叫什么名字</pattern>
-<template>我叫刘德华</template>
-</category>
-<category><pattern>你叫*</pattern>
-<template>我叫张学友</template>
+<category><pattern>你叫什么名字#</pattern>
+<template>我叫兔女郎</template>
 </category>
 <category><pattern>你是男是女</pattern>
-<template>你说呢？</template>
+<template>当然是女孩子啦</template>
 </category>
-<category><pattern>你好</pattern>
-<template>我很好</template>
+<category><pattern>你几岁#</pattern>
+<template>女孩子的年龄是保密呦</template>
+</category>
+<category><pattern>你好#</pattern>
+<template>你好呀</template>
 </category>
 <category><pattern>好呀</pattern>
 <template><srai>你好</srai></template>
 </category>
-<category><pattern>帮助</pattern>
-<template><button>
-  <text>百度</text>
-  <url>http://www.baidu.com </url>
-</button></template>
-</category>
-<category>
-  <pattern>POSTBACK</pattern>
-  <template>
-    Here's an example of what a few postback buttons look like in the widget.
-    <button>
-      <text>Postback Button</text>
-      <postback>POSTBACK BUTTON</postback>
-    </button>
-  </template>
-</category>
-<category>
-  <pattern>REPLY EXAMPLE</pattern>
-  <template>
-    Here's an example of what a few reply buttons look like in the widget. Replies within the same template are always grouped together beneath your last message.
-    <reply>
-      <text>Ok!</text>
-      <postback>POSTBACK</postback>
-    </reply>
-  </template>
-</category>
-<category>
-  <pattern>POSTBACK</pattern><that>REPLIES *</that>
-  <template>
-    Quick replies work just like postbacks, and send a message directly to your bot without the user having to see it. That's how you hit this category!
-    <reply>
-      <text>Ok!</text>
-      <postback>Nice!</postback>
-    </reply>
-  </template>
-</category>
-<category>
-  <pattern>link</pattern>
-<template><link>
-    <text>Pandorabots.com</text>
-    <url>https://www.pandorabots.com </url>
-  </link></template>
-</category>
 <category>
 <pattern>帮助</pattern>
 <template>
-    <li>1、怎样进入电子围栏编辑页面</li>
-    <li>2、门店辖区分哪几种划分方式</li>
-    <li>3、如何打印快兔物流标签</li>
-    <p>请输入前面序号</p>
+    <p>1、电子围栏</p>
+    <p>2、门店划分</p>
+    <p>3、打印标签</p>
+    <p>请输入前面序号,或者直接输入您的问题</p>
 </template>
 </category>
 <category>
-<pattern>1</pattern>
+<pattern>*进入电子围栏*页面</pattern>
 <template>
 登录快兔工作人员平台，进入【客服运营系统】-选择【运营工具】-点击【营业点配置管理】-选择【营业网点】-【电子围栏辖区】。
 注意事项：<br/>
@@ -95,17 +52,11 @@
 <category>
   <pattern>2</pattern>
   <template>
-  <srai>门店辖区#划分#</srai>
-  </template>
-</category>
-<category>
-  <pattern>门店辖区#划分#</pattern>
-  <template>
   <srai>门店辖区分哪几种划分方式</srai>
   </template>
 </category>
 <category>
-  <pattern>门店辖区分哪几种划分方式</pattern>
+  <pattern>门店辖区#划分#</pattern>
   <template>
   <p>分为两种方式，两种方式只能二选一：</p>
   <p>1. 行政区划。行政区划是根据国家行政区域来划分门店辖区，如果门店辖区和行政区划吻合，例如番禺区、天河区，可采用这种方式。划分非常简单，直接选择门店覆盖哪些区县，保存即可；</p>
@@ -113,21 +64,21 @@
   </template>
 </category>
 <category>
-  <pattern>3</pattern>
+  <pattern>如何打印快兔物流标签</pattern>
   <template>
-<p>请点击下载《快兔物流标签打印操作说明》及《安装驱动》压缩包，<a href='/ftp/mobile/weixin/printer.zip'>点我下载</a></p>
+<p>请点击下载《快兔物流标签打印操作说明》及《安装驱动》压缩包，<a href='http://test.ktu56.com/ftp/mobile/weixin/printer.zip'>点我下载</a></p>
   </template>
 </category>
 
 <category>
-  <pattern>如何绘制电子围栏</pattern>
+  <pattern>#电子围栏</pattern>
   <template>
   <p>可借助行政区划辅助工具定位到区县一级的行政边界，输入行政名称，点击【显示边界】按钮。(下述以广州市番禺区为例，蓝色线条范围内为广州市番禺区的行政边界)</p>
-  <p><img src="static2/images/electric_fence/ef1.png"/></p>
+  <p><img src="http://test.ktu56.com/static2/images/electric_fence/ef1.png" width="80%"/></p>
   <p>点击【画多边形】功能按钮，在地图上点击，可自动将各点连接成线。根据该行政区划的边界进行整体描点，将区域大致的围栏描绘出来(下列演示例为广州番禺区(红色阴影部分))，通过的鼠标的滚轮可进行地图比例的放大缩小操作。</p>
-  <p><img src="static2/images/electric_fence/ef2.png"/></p>
+  <p><img src="http://test.ktu56.com/static2/images/electric_fence/ef2.png" width="80%"/></p>
   <p>点击【启用编辑模式】，将地图放大，按住并拖拽正方形小句柄，可调整围栏。</p>
-  <p><img src="static2/images/electric_fence/ef3.png"/></p>
+  <p><img src="http://test.ktu56.com/static2/images/electric_fence/ef3.png" width="80%"/></p>
   <p class="warn_text">注意事项：</p>
   <p>(1) 辅助功具只能查询到行政区县一级的行政边界。</p>
   <p>(2) 可以根据个人喜好，选择是否显示边界，系统推荐使用边界显示，可以更精确的描点。</p>
@@ -137,18 +88,29 @@
   </template>
 </category>
 <category>
-  <pattern>如何避免使用电子围栏画辖区与其他门店重叠</pattern>
+  <pattern>#电子围栏#重叠</pattern>
   <template>
     <p>描绘的电子围栏时与现有的某个轻分拨中心辖区相邻，可借助轻分拨中心辖区辅助工具，在地图上进行标记，将相邻的门店辖区标记出来(可以显示多个门店辖区)。(下述以科韵路轻分拨中心(演示数据)为例，绿色阴影范围内为科韵路轻分拨中心辖区的围栏边界)</p>
-    <p><img src="static2/images/electric_fence/ef4.png"/></p>
+    <p><img src="http://test.ktu56.com/static2/images/electric_fence/ef4.png" width="80%"/></p>
   </template>
 </category>
 <category>
-  <pattern>怎样提高绘制电子围栏的精准度</pattern>
+  <pattern>#提高#精准度</pattern>
   <template>
     <p>1. 按住并拖拽线条，可调整围栏，建议沿河流、道路等显著地标划分边界，分界线尽量避开货主密集区域，切勿留下盲区，以免定位偏移导致订单被分配到其他门店或者无法判断订单归属门店。</p>
     <p>2. 点击左上角按钮可切换到卫星地图模式，辅助精确识别位置；</p>
     <p>3. 门店紧密交界的地方线条可以重叠，但是不要留下空白。</p>
+  </template>
+</category>
+<category>
+  <pattern>查询订单</pattern>
+  <template>请输入您的订单号</template>
+</category>
+<category>
+  <pattern>*</pattern>
+  <that>请输入您的订单号</that>
+  <template>
+    <sraix botid="844a85704e345a9a" host="localhost:8888">http://localhost:8080/wxIntelligentInquiry/checkDiscount.action?no=<star/></sraix>
   </template>
 </category>
 
